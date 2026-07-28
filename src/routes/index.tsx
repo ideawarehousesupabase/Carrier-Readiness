@@ -79,12 +79,10 @@ function Landing() {
           <nav className="hidden items-center gap-7 text-sm font-medium tracking-wide lg:flex">
             {[
               { name: "HOME", id: "home" },
-              { name: "ABOUT", id: "about" },
-              { name: "PLATFORM", id: "platform" },
-              { name: "MARKET", id: "market" },
               { name: "PROCESS", id: "process" },
-            ].map((l, i) => (
-              <a key={l.name} href={`#${l.id}`} className={`hover:opacity-100 ${i === 4 ? "border-b-2 border-accent pb-0.5" : "opacity-90"}`}>{l.name}</a>
+              { name: "ABOUT", id: "about" },
+            ].map((l) => (
+              <a key={l.name} href={`#${l.id}`} className="hover:opacity-100 opacity-90">{l.name}</a>
             ))}
           </nav>
           <Link to="/auth/register">
