@@ -77,8 +77,14 @@ function Landing() {
             </div>
           </Link>
           <nav className="hidden items-center gap-7 text-sm font-medium tracking-wide lg:flex">
-            {["HOME", "ABOUT", "PLATFORM", "MARKET", "PROCESS"].map((l, i) => (
-              <a key={l} href="#process" className={`hover:opacity-100 ${i === 4 ? "border-b-2 border-accent pb-0.5" : "opacity-90"}`}>{l}</a>
+            {[
+              { name: "HOME", id: "home" },
+              { name: "ABOUT", id: "about" },
+              { name: "PLATFORM", id: "platform" },
+              { name: "MARKET", id: "market" },
+              { name: "PROCESS", id: "process" },
+            ].map((l, i) => (
+              <a key={l.name} href={`#${l.id}`} className={`hover:opacity-100 ${i === 4 ? "border-b-2 border-accent pb-0.5" : "opacity-90"}`}>{l.name}</a>
             ))}
           </nav>
           <Link to="/auth/register">
@@ -88,7 +94,7 @@ function Landing() {
       </header>
 
       {/* Hero */}
-      <section className="bg-beige">
+      <section id="home" className="bg-beige">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-20 lg:grid-cols-2">
           <div>
             <div className="mb-4 text-xs font-semibold tracking-[0.2em] text-accent">CARRIER ONBOARDING READINESS PLATFORM</div>
@@ -131,7 +137,7 @@ function Landing() {
       </section>
 
       {/* Feature Strip */}
-      <section className="border-y border-beige-deep bg-beige-deep/40">
+      <section id="platform" className="border-y border-beige-deep bg-beige-deep/40">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 py-12 md:grid-cols-4">
           {[
             { i: ShieldCheck, t: "Compliance Center", d: "Live document, insurance & safety verification." },
@@ -189,7 +195,7 @@ function Landing() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary text-primary-foreground">
+      <section id="market" className="bg-primary text-primary-foreground">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-6 py-16 text-center">
           <h2 className="text-4xl font-bold">Ready to close your Readiness Gap?</h2>
           <p className="max-w-2xl opacity-90">See how CORP scores every carrier in your network and unlocks the right lanes — automatically.</p>
@@ -214,7 +220,7 @@ function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-blue-deep text-primary-foreground">
+      <footer id="about" className="bg-brand-blue-deep text-primary-foreground">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
           <div>
             <div className="text-2xl font-bold">CarrierReadiness</div>
