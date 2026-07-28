@@ -77,7 +77,7 @@ function Landing() {
             </div>
           </Link>
           <nav className="hidden items-center gap-7 text-sm font-medium tracking-wide lg:flex">
-            {["HOME", "ABOUT", "PLATFORM", "MARKET", "PROCESS", "FAQ", "PRICING", "CONTACT"].map((l, i) => (
+            {["HOME", "ABOUT", "PLATFORM", "MARKET", "PROCESS"].map((l, i) => (
               <a key={l} href="#process" className={`hover:opacity-100 ${i === 4 ? "border-b-2 border-accent pb-0.5" : "opacity-90"}`}>{l}</a>
             ))}
           </nav>
@@ -233,7 +233,6 @@ function Landing() {
             <ul className="space-y-2 text-sm opacity-90">
               <li>About CarrierReadiness</li>
               <li>Founder & CEO</li>
-              <li>Contact</li>
             </ul>
           </div>
           <div>
